@@ -54,6 +54,9 @@ var Engine = (function(global) {
         lastTime = now;
 
         document.getElementById('score').innerHTML = 'Score: ' + player.score;
+        player.invincible ?
+            document.getElementById('invincible').innerHTML = 'Invincible! Squash all the bugs!' :
+            document.getElementById('invincible').innerHTML = '';
 
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.

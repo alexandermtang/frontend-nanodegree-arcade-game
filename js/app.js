@@ -59,6 +59,7 @@ Player.prototype.update = function(dt) {
                 enemy.y = [58, 141, 224][Math.floor(Math.random() * 3)];
             } else {
                 that.y = 5 * ROW_HEIGHT - 25;
+                player.score -= 1;
             }
         }
     });
@@ -71,6 +72,7 @@ Player.prototype.update = function(dt) {
         if (!star.isRendered) star = new Star();
     }
 
+    // got star, invincible!
     if (this.x === star.x &&
         this.y === star.y - 10) {
         player.invincible = true;
