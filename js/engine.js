@@ -25,7 +25,7 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
+    canvas.width = 606;
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
@@ -52,6 +52,8 @@ var Engine = (function(global) {
          * for the next time this function is called.
          */
         lastTime = now;
+
+        document.getElementById('score').innerHTML = 'Score: ' + player.score;
 
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
@@ -113,10 +115,10 @@ var Engine = (function(global) {
                 'images/stone-block.png',   // Row 2 of 3 of stone
                 'images/stone-block.png',   // Row 3 of 3 of stone
                 'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
+                'images/grass-block.png',   // Row 2 of 2 of grass
             ],
             numRows = 6,
-            numCols = 5,
+            numCols = 6,
             row, col;
 
         /* Loop through the number of rows and columns we've defined above
@@ -152,6 +154,10 @@ var Engine = (function(global) {
         });
 
         player.render();
+
+        rock.render();
+
+        star.render();
     }
 
     /* This function does nothing but it could have been a good place to
@@ -171,7 +177,9 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-boy.png',
+        'images/rock.png',
+        'images/Star.png'
     ]);
     Resources.onReady(init);
 
