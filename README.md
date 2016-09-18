@@ -1,5 +1,5 @@
 frontend-nanodegree-arcade-game
 ===============================
 
-Frogger clone
+###### Frogger clone
 Open index.html to start. Use arrow keys to play.
